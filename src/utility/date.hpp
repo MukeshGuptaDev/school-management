@@ -2,12 +2,14 @@
 #define SRC_UTILITY_H
 
 #include <string>
-#include<array>
+#include <array>
 
 class Date{
   private:
     int date_, month_, year_;
-    const std::array<std::string, 12> monthInWord = {"January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"};
+    const std::array<std::string, 12> monthInWord = {"January", "Febuary", "March",
+      "April", "May", "June", "July", "August", "September", 
+      "October", "November","December"};
 
   public:
     Date(int date, int month, int year);
