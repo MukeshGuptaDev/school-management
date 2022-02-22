@@ -13,6 +13,7 @@ class Date{
 
   public:
     Date(int date, int month, int year);
+    Date& operator=(Date);
     void setDate(int date);
     void setMonth(int month);
     void setYear(int year);

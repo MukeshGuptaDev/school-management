@@ -6,6 +6,13 @@ Date::Date(int date, int month, int year) {
   setDate(date);
 }
 
+Date& Date::operator=(Date date) {
+  year_ = date.year_;
+  month_ = date.month_;
+  date_ = date.date_;
+  return *this;
+}
+
 void Date::setDate(int date) {
   if (validateDate(date)) {
     date_ = date;
