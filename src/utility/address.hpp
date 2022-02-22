@@ -11,7 +11,6 @@ class Address{
   public:
     Address(std::string location, std::string district, 
     std::string state, std::string country, int pincode);
-
     void setLocation(std::string location );
     void setDistrict(std::string district);
     void setState(std::string state);
@@ -22,7 +21,6 @@ class Address{
     std::string getDistrict();
     std::string getState();
     int getPincode();
-
     std::string getAddress();
 
 };    

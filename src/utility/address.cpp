@@ -51,10 +51,10 @@ int Address::getPincode(){
 }
 
 std::string Address::getAddress(){
-      std::string result = location_;
-      result += "," + district_;
-      result += "," + state_;
-      result += "," + country_;
-      result += "," + std::to_string(pincode_);
-      return result;
+  std::string result = location_;
+  result += "," + district_;
+  result += "," + state_;
+  result += "," + country_;
+  result += "," + std::to_string(pincode_);
+  return result;
 }
