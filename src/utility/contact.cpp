@@ -10,7 +10,8 @@ Contact& Contact::operator=(const Contact& other) {
 void Contact::setNumber(long long number) {
   if (verifyNumber(number))
     number_ = number;
-  exit(1);
+  else 
+    exit(1);
 }
 
 long long Contact::getNumber(){
