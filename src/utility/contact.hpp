@@ -10,6 +10,9 @@ class Contact {
     Contact& operator=(const Contact&);
     void setNumber(long long);
     long long getNumber();
+
+  private:
+    bool verifyNumber(long long);
 };
 
 #endif

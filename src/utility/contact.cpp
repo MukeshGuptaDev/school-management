@@ -8,9 +8,17 @@ Contact& Contact::operator=(const Contact& other) {
   return *this;
 }
 void Contact::setNumber(long long number) {
-  number_ = number;
+  if (verifyNumber(number))
+    number_ = number;
+  exit(1);
 }
 
 long long Contact::getNumber(){
   return number_;
+}
+
+bool Contact::verifyNumber(long long number) {
+  long long lb = 1e9;
+  long long ub = 1e10;
+  return lb <= number && number < ub;
 }
