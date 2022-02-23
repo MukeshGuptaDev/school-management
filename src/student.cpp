@@ -1,33 +1,54 @@
 #include "student.hpp"
 
-Student::Student(Person name, std::string rollno, std::string class, Date dateOfAdmission,
- Date dateOfPassingYear){
-  setName(name);
-  setRollNo(rollno);
-  setClass(class);
-  setDateOfAdmission(dateOfAdmission);
-  setDateOfPassingYear(dateOfPassingYear);
- }
- Student& Student::operator=(const Student &other){
-   name_ = other.name_;
-   roll_no_ = other.roll_no_;
-   class_ = other.class_;
-   dateOfAdmission_ = other.dateOfAdmission_;
-   dateOfPassingYear_ = other.dateOfPassingYear_;
- }
+  Student::Student(std::string name, Date dob, std::vector<Qualification> qualification,
+    Address currentAddress, Address parmanentAddress, BloodGroup bloodGroup, 
+    Contact contact, Contact emerygencyContact, std::string rollNo, 
+    std::string curClass, Date dateOfAdmission) : Person(name, dob, qualification,
+      currentAddress, parmanentAddress, bloodGroup, contact, emerygencyContact)  {
+        setRollNo(rollNo);
+        setClass(curClass);
+        setDateOfAdmission(dateOfAdmission);
+    }
 
- void Student::setname(std::string name){
-   name_ = name;
- }
 
- void Student::setRollNo(std::string rollno){
-   roll_no = rollno;
- }
+  Student::Student(std::string name, Date dob, std::vector<Qualification> qualification,
+    Address currentAddress, Address parmanentAddress, BloodGroup bloodGroup, 
+    Contact contact, Contact emerygencyContact, std::string rollNo, 
+    std::string curClass, Date dateOfAdmission, Date dateOfPassing) {
+      Student(name, dob, qualification, currentAddress, parmanentAddress, bloodGroup,
+        contact, emerygencyContact, rollNo, curClass, dateOfAdmission);
+      setDateOfPassingYear(dateOfPassing);
+    }
 
- void Student::setClass(std::string )
-  std::string getRollNo();
-  std::string getClass();
-  Date getDateOfAdmission();
-  Date getDateOfPassingYear();
- 
+
+  void Student::setRollNo(std::string rollNo) {
+    rollNo_ = rollNo;
+  }
+
+  void Student::setClass(std::string curClass) {
+    class_ = curClass;
+  }
+
+  void Student::setDateOfAdmission(Date date) {
+    dateOfAdmission_ = date;
+  }
+
+  void Student::setDateOfPassingYear(Date date) {
+    dateOfPassingYear_ = date;
+  }
+
+  std::string Student::getRollNo() {
+    return rollNo_;
+  }
+
+  std::string Student::getClass() {
+    return class_;
+  }
+
+Date Student::getDateOfAdmission(){
+  return dateOfAdmission_;
+} 
   
+  Date Student::getDateOfPassingYear(){
+    return dateOfPassingYear_;
+  }
