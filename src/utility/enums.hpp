@@ -8,5 +8,12 @@ enum class BloodGroup{
   ABPositive, ABNegative
 };
 
+enum class Gender{
+  Male, Female, Other
+};
+
+enum class Role{
+  Teacher, Hod, Staff
+};
 
 #endif
