@@ -7,13 +7,7 @@
 #include "utility/contact.hpp"
 #include "utility/date.hpp"
 #include "utility/qualification.hpp"
-
-enum class BloodGroup{
-  APositive, ANegative,
-  BPositive, BNegative,
-  OPositive, ONegative,
-  ABPositive, ABNegative
-};
+#include "utility/enums.hpp"
 
 class Person{
   private:
