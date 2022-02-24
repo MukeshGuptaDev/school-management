@@ -12,6 +12,7 @@ class Qualification{
   public:
     Qualification(std::string college, std::string degree, Date from, Date to);
     Qualification& operator=(const Qualification &other);
+    Qualification() = default;
     void setCollege(std::string);
     void setDegree(std::string);
     void setFromDate(Date);

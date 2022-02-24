@@ -7,6 +7,7 @@ class Contact {
   
   public:
     Contact(long long);
+    Contact() = default;
     Contact& operator=(const Contact&);
     void setNumber(long long);
     long long getNumber();

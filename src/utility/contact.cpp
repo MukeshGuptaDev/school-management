@@ -1,4 +1,5 @@
 #include "contact.hpp"
+#include <cstdlib>
 
 Contact::Contact(long long number) {
   setNumber(number);

@@ -11,6 +11,7 @@ class Address{
   public:
     Address(std::string location, std::string district, 
     std::string state, std::string country, int pincode);
+    Address() = default;
     void setLocation(std::string location );
     void setDistrict(std::string district);
     void setState(std::string state);

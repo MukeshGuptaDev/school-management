@@ -24,6 +24,7 @@ class Person{
     
     Person(std::string, Date, std::vector<Qualification>, Address, Address, BloodGroup, Contact, Contact);
     Person& operator= (const Person &);
+    Person() = default;
     void setName(std::string);
     void setDateOfBirth(Date);
     void setQualification(std::vector<Qualification>&);
